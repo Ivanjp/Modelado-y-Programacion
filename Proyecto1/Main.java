@@ -5,7 +5,7 @@ public class Main{
     int opcion;
 
     do{
-      System.out.println("Hola Bienvenido selecciona una de las siguientes opciones dependiendo de tu categoría\n\n" +
+      System.out.println("Hola Bienvenido en que perfil quieres acceder..\n\n" +
       "1.- Administrador\n" +
       "2.- Profesor\n" +
       "3.- Alumno\n" +
