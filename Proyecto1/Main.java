@@ -1,6 +1,28 @@
+import java.util.Scanner;
+
 public class Main{
 
+  private DespliegaMenu dp;
+
+	private void muestraMenuAdmin(){
+		dp = new MenuAdmin();
+	}
+
+	private void muestraMenuProf(){
+		dp = new MenuProf();
+	}
+
+	private void muestraMenuAlumno(){
+		dp = new MenuAlumno();
+	}
+
+	private void ejecutarMenu(){
+		dp.muestraMenu();
+	}
+
   public static void main(String[] args) {
+
+    Main m = new Main();
     Scanner sc = new Scanner(System.in);
     int opcion;
 
@@ -16,27 +38,16 @@ public class Main{
 
       switch(opcion){
         case 1:
-        System.out.println("Hola Administrador que deseas hacer...:\n\n"+
-        "1.- Consultar lista de alumnos inscritos en la escuela.\n"+
-        "2.- Consultar lista de alumnos de cada area.\n"+
-        "3.- Consultar lista de alumnos de opciones técnicas.\n"+
-        "4.- Consultar lista de profesores.\n"+
-        "5.- Graduar un alumno.\n"+
-        "6.- Inscribir un alumno.\n"+
-        "7.- Dar de baja un alumno.\n"+
-        "8.- Contratar un profesor.\n"+
-        "9.- Despedir un profesor.\n");
+            m.muestraMenuAdmin();
+            m.ejecutarMenu();
         break;
         case 2:
-        System.out.println("Hola Profesor que deseas hacer...:\n\n"+
-        "1.- Consultar información de un grupo.\n"+
-        "2.- Asignar calificacion a los alumnos.\n");
+            m.muestraMenuProf();
+            m.ejecutarMenu();
         break;
         case 3:
-        System.out.println("Hola Alumno que deseas hacer...:\n\n"+
-        "1.- Consultar calificacion de una materia.\n"+
-        "2.- Consultar promedio.\n"+
-        "3.- Inscribirse a una opcion tecnica.\n");
+            m.muestraMenuAlumno();
+            m.ejecutarMenu();
         break;
         case 0:
         break;

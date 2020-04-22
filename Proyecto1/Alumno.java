@@ -1,21 +1,24 @@
-public class Alumno implements Usuario{
+public class Alumno implements Usuario {
 
-  public String nombre;
-  public String app;
-  public long id_alumno;
-  public String areaA;
-  public String materia1;
-  public String materia2;
-  public String grupoM1;
-  public String grupoM2;
-  public String op_tecnica;
-  public int califM1;
-  public int califM2;
-  public double prom;
+    public String nombre;
+    public long id_alumno;
+    public String areaA;
+    public String materia1;
+    public String materia2;
+    public String grupoM1;
+    public String grupoM2;
+    public String op_tecnica;
+    public int califM1;
+    public int califM2;
+    public int califOPT;
+    public double prom;
 
-  public Alumno(String nombre, String app, long id_alumno, String areaA, String materia1, String materia2, String grupoM1, String grupoM2, String op_tecnica) {
+    public Alumno(){
+
+    }
+
+    public Alumno(String nombre, long id_alumno, String areaA, String materia1, String materia2, String grupoM1, String grupoM2, String op_tecnica) {
         this.nombre = nombre;
-        this.app = app;
         this.id_alumno = id_alumno;
         this.areaA = areaA;
         this.materia1 = materia1;
@@ -23,6 +26,7 @@ public class Alumno implements Usuario{
         this.grupoM1 = grupoM1;
         this.grupoM2 = grupoM2;
         this.op_tecnica = op_tecnica;
+        this.califOPT = 0;
         this.califM1 = 0;
         this.califM2 = 0;
         this.prom = 0.0;
@@ -30,10 +34,6 @@ public class Alumno implements Usuario{
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String getApp() {
-        return app;
     }
 
     public long getId_alumno() {
@@ -78,20 +78,36 @@ public class Alumno implements Usuario{
 
     public void setProm(double prom) {
         this.prom = prom;
-      }
+    }
 
+    public void consultaCalif(long id,String mat){
 
-	@Override
-	public void getDatosUsuario(){
-		System.out.println("id: " + id_godinez + " nombre: " + nombre
-			+ " puesto: Godinez CEO");
+    }
 
-		System.out.println("Subordinados explotables del CEO: \n");
+    public void consultaProm(long id){
 
-		for(Godinez godi:godinezManagerExplotables){
-			System.out.print("   ");
-        	godi.getDatosEmpleado();
-		}
-	}
+    }
+
+    public void inscribirOT(long id , String op){
+
+    }
+
+//    @Override
+//    public void getDatosUsuario() {
+//        System.out.println("id: " + id_godinez + " nombre: " + nombre
+//                + " puesto: Godinez CEO");
+//
+//        System.out.println("Subordinados explotables del CEO: \n");
+//
+//        for (Godinez godi : godinezManagerExplotables) {
+//            System.out.print("   ");
+//            godi.getDatosEmpleado();
+//        }
+//    }
+
+    @Override
+    public void getDatosUsuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
