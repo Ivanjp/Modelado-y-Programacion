@@ -1,3 +1,3 @@
 public interface DespliegaMenu{
-	public void muestraMenu();
+	public void muestraMenu(Administrador a);
 }

@@ -1,9 +1,10 @@
+
 import java.util.Scanner;
 
 public class MenuAlumno implements DespliegaMenu {
 
     @Override
-    public void muestraMenu() {
+    public void muestraMenu(Administrador a) {
 
         Scanner sc = new Scanner(System.in);
         int opcion;

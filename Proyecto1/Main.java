@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main{
 
   private DespliegaMenu dp;
+  Administrador a = new Administrador();
 
 	private void muestraMenuAdmin(){
 		dp = new MenuAdmin();
@@ -17,12 +18,12 @@ public class Main{
 	}
 
 	private void ejecutarMenu(){
-		dp.muestraMenu();
+		dp.muestraMenu(a);
 	}
 
   public static void main(String[] args) {
-
-    Main m = new Main();
+    
+      Main m = new Main();
     Scanner sc = new Scanner(System.in);
     int opcion;
 
@@ -35,6 +36,7 @@ public class Main{
 
       String opcionUsuario = sc.nextLine();
       opcion = Integer.parseInt(opcionUsuario);
+      
 
       switch(opcion){
         case 1:

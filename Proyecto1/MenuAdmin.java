@@ -1,12 +1,15 @@
+
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MenuAdmin implements DespliegaMenu {
+    
+    
 
     @Override
-    public void muestraMenu() {
+    public void muestraMenu(Administrador a) {
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -24,7 +27,7 @@ public class MenuAdmin implements DespliegaMenu {
 
         String opcionUsuario = sc.nextLine();
         opcion = Integer.parseInt(opcionUsuario);
-        Administrador a = new Administrador();
+        
 
         switch (opcion) {
             case 1:
@@ -47,11 +50,11 @@ public class MenuAdmin implements DespliegaMenu {
             case 6: {
                 try {
                     a.inscribirAlumno();
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (NoSuchAlgorithmException ex) {
                     Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (InterruptedException ex) {
+                Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
+            }
             }
             break;
             case 7:
@@ -64,7 +67,9 @@ public class MenuAdmin implements DespliegaMenu {
                     a.contratarProfesor();
                 } catch (NoSuchAlgorithmException ex) {
                     Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (InterruptedException ex) {
+                Logger.getLogger(MenuAdmin.class.getName()).log(Level.SEVERE, null, ex);
+            }
             }
             break;
             case 9:

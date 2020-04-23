@@ -1,3 +1,4 @@
+
 public class Alumno implements Usuario {
 
     public String nombre;
@@ -12,12 +13,13 @@ public class Alumno implements Usuario {
     public int califM2;
     public int califOPT;
     public double prom;
-
+    public boolean ot;
+    
     public Alumno(){
-
+        
     }
 
-    public Alumno(String nombre, long id_alumno, String areaA, String materia1, String materia2, String grupoM1, String grupoM2, String op_tecnica) {
+    public Alumno(String nombre, long id_alumno, String areaA, String materia1, String materia2, String grupoM1, String grupoM2, String op_tecnica, boolean ot) {
         this.nombre = nombre;
         this.id_alumno = id_alumno;
         this.areaA = areaA;
@@ -30,6 +32,7 @@ public class Alumno implements Usuario {
         this.califM1 = 0;
         this.califM2 = 0;
         this.prom = 0.0;
+        this.ot = ot;
     }
 
     public String getNombre() {
@@ -79,17 +82,17 @@ public class Alumno implements Usuario {
     public void setProm(double prom) {
         this.prom = prom;
     }
-
+    
     public void consultaCalif(long id,String mat){
-
+        
     }
-
+    
     public void consultaProm(long id){
-
+        
     }
-
+    
     public void inscribirOT(long id , String op){
-
+        
     }
 
 //    @Override
