@@ -1,3 +1,3 @@
 public interface Usuario{
-  public void getDatosUsuario();
+  public void adorno();
 }

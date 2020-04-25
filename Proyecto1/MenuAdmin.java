@@ -6,8 +6,10 @@ import java.util.logging.Logger;
 
 public class MenuAdmin implements DespliegaMenu {
     
-    
-
+    /**
+     * Metodo que crea el menu para un administrador
+     * @param a Administrador
+     */
     @Override
     public void muestraMenu(Administrador a) {
 
@@ -34,7 +36,9 @@ public class MenuAdmin implements DespliegaMenu {
                 a.consultaAlumInscritos();
                 break;
             case 2:
-                a.consultaAlumnosArea();
+                System.out.println("Ingresa el area que quiersas consultar: ");
+                String al = sc.nextLine();
+                a.consultaAlumnosArea(al);
                 break;
             case 3:
                 a.consultaAlumnosOT();
@@ -44,8 +48,8 @@ public class MenuAdmin implements DespliegaMenu {
                 break;
             case 5:
                 System.out.println("Ingresa el id del alumno que deseas graduar: ");
-                long al = sc.nextLong();
-                a.graduar(al);
+                long alum = sc.nextLong();
+                a.graduar(alum);
                 break;
             case 6: {
                 try {
@@ -61,6 +65,7 @@ public class MenuAdmin implements DespliegaMenu {
                 System.out.println("Ingresa el id del alumno que deseas dar de baja: ");
                 long alu = sc.nextLong();
                 a.darBaja(alu);
+                System.out.println("Alumno dado de baja correctamente: ");
                 break;
             case 8: {
                 try {

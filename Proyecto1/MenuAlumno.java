@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class MenuAlumno implements DespliegaMenu {
 
+    /**
+     * Metodo que crea el menu para un Alumno
+     * @param a Administrador para ocupar la lista de profesores de ese administrador
+     */
     @Override
     public void muestraMenu(Administrador a) {
 
@@ -10,9 +14,6 @@ public class MenuAlumno implements DespliegaMenu {
         int opcion;
         long id;
         Alumno al = new Alumno();
-
-        System.out.println("Ingresa tu id: ");
-        id = sc.nextLong();
 
         System.out.println("Hola Alumno que deseas hacer...:\n\n"
                 + "1.- Consultar calificacion de una materia.\n"
@@ -24,15 +25,23 @@ public class MenuAlumno implements DespliegaMenu {
 
         switch (opcion) {
             case 1:
+                System.out.println("Ingresa tu id: ");
+                id = sc.nextLong();
                 System.out.println("¿De cual materia quisieras consultar tu calificacion?");
                 String mat = sc.nextLine();
-                al.consultaCalif(id, mat);
+                System.out.println("¿Cual grupo es A o B?");
+                String grp = sc.nextLine();
+                al.consultaCalif(id, mat, grp, a.getArray());
                 break;
             case 2:
-                al.consultaProm(id);
+                System.out.println("Ingresa tu id: ");
+                id = sc.nextLong();
+                al.consultaProm(id,a.getArray());
                 break;
             case 3:
-                al.inscribirOT(id, "si");
+                System.out.println("Ingresa tu id: ");
+                id = sc.nextLong();
+                al.inscribirOT(id,a.getArray());
                 break;
             default:
                 System.out.println("Elige una opcion valida.\n");
