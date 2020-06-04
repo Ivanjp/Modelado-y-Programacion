@@ -9,17 +9,32 @@ public class Empacando implements EstadoMaquina {
 
     @Override
     public void reabastecer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      System.out.println("No se puede realizar esta accion hasta terminar este lote");
     }
 
     @Override
     public void elegirDulce() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("No se puede realizar esta accion hasta terminar este lote");
     }
 
     @Override
-    public void entregarDulce() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void entregarDulce(){
+        maquina.asignarEstadoMaquina(maquina.getEstadoEncendida_suspendida());
+    }
+
+    @Override
+    public void terminar() {
+      System.out.println("No se puede realizar esta accion hasta terminar este lote");
+    }
+
+    @Override
+    public void iniciar() {
+       System.out.println("No se puede realizar esta accion hasta terminar este lote");
+    }
+
+    @Override
+    public void preparando() {
+       System.out.println("No se puede realizar esta accion hasta terminar este lote");
     }
     
 }

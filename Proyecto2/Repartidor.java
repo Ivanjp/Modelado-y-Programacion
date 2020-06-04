@@ -1,13 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author beatl
- */
 public class Repartidor {
+    
+    String rfc;
+    int id;
+    String nombre;
+
+    public Repartidor(String rfc, int id, String nombre) {
+        this.rfc = rfc;
+        this.id = id;
+        this.nombre = nombre;
+    }   
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
     
 }

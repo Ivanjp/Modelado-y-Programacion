@@ -25,6 +25,6 @@ public class conAlmendras extends RecetasWonka {
     void finalizando() {
         System.out.println("Finalizando proceso de preparación");
         Chocolate ch = new Chocolate("Chocolate con almendras",50);
-        w.empaqueta(ch);
+        w.Prod_term(ch);
     }
 }

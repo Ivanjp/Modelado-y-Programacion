@@ -25,6 +25,6 @@ public class conChamoy extends RecetasWonka {
     void finalizando() {
         System.out.println("Finalizando proceso de preparación");
         Gomitas g = new Gomitas("Frutas con chamoy", 100);
-        w.empaqueta(g);
+        w.Prod_term(g);
     }
 }

@@ -1,9 +1,13 @@
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Wonka3000 {
 
     ArrayList<Ingrediente> inv = new ArrayList<>();
+    List<Repartidor> repartidores = new ArrayList<>();
+    List<Sucursal> sucursales = new ArrayList<>();
+    Producto terminado;//Producto terminado
 
     Ingrediente a1 = new Ingrediente("almendra", 1000);
     Ingrediente a2 = new Ingrediente("cacao", 3000);
@@ -20,6 +24,16 @@ public class Wonka3000 {
     Ingrediente a14 = new Ingrediente("sal", 1000);
     Ingrediente a15 = new Ingrediente("chispas", 1000);
     Ingrediente a16 = new Ingrediente("mermelada", 1000);
+    Sucursal viaducto = new Suc_Viaducto();
+    Sucursal copilco = new Suc_Copilco();
+    Sucursal azc = new Suc_Azcapotzalco();
+    Repartidor r1 = new Repartidor("AHJ1910",1,"Miguel Torres");
+    Repartidor r2 = new Repartidor("MRZ2208",2,"Monica Rodriguez");
+    Repartidor r3 = new Repartidor("MPT0310",3,"Tere Maturano");
+    Repartidor r4 = new Repartidor("FMC2672",4,"Francisco Contreras");
+    Repartidor r5 = new Repartidor("EOQ2412",5,"Elizabeth Rojas");
+    Repartidor r6 = new Repartidor("JPP1078",6,"Jorge Perez");
+    Repartidor r7 = new Repartidor("RPF7621",7,"Raul Franco");
 
     public Wonka3000() {
     }
@@ -40,6 +54,16 @@ public class Wonka3000 {
         inv.add(a14);
         inv.add(a15);
         inv.add(a16);
+        sucursales.add(azc);
+        sucursales.add(viaducto);
+        sucursales.add(copilco);
+        repartidores.add(r1);
+        repartidores.add(r2);
+        repartidores.add(r3);
+        repartidores.add(r4);
+        repartidores.add(r5);
+        repartidores.add(r6);
+        repartidores.add(r7);
     }
 
     public void preparaDulce(String tipo) {
@@ -47,7 +71,6 @@ public class Wonka3000 {
         if (tipo.equalsIgnoreCase("dulces")) {
 
             RecetasWonka cd = new conDulce(this);
-            
 
             cd.rutinaDiaria();
 
@@ -83,9 +106,21 @@ public class Wonka3000 {
         }
     }
 
+    public void Prod_term(Producto p) {
+        terminado = p;
+    }
+
+    public Producto getTerminado() {
+        return terminado;
+    }
+
+    public List<Repartidor> getRepartidores() {
+        return repartidores;
+    }
+
     public void empaqueta(Producto p) {
-       for (int i = 0; i < inv.size(); i++) {
-           
+        for (int i = 0; i < inv.size(); i++) {
+
         }
     }
 

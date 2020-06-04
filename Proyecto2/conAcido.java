@@ -25,7 +25,7 @@ public class conAcido extends RecetasWonka {
     void finalizando() {
         System.out.println("Finalizando proceso de preparación");
         Gomitas g = new Gomitas("Gusanos acidos", 100);
-        w.empaqueta(g);
+        w.Prod_term(g);
     }
 
 }

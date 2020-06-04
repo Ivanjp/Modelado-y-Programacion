@@ -24,6 +24,6 @@ public class conLeche extends RecetasWonka {
     void finalizando() {
         System.out.println("Finalizando proceso de preparación");
         Chocolate ch = new Chocolate("Chocolate con leche", 50);
-        w.empaqueta(ch);
+        w.Prod_term(ch);
     }
 }

@@ -1,13 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author beatl
- */
 public class Lote {
-    
+
+    Producto producto;
+
+    public Lote(Producto producto) {
+        this.producto = producto;
+    }
+
+    public String getNombre() {
+        return producto.getTipo();
+    }
+
+    public int getCantidad() {
+        return producto.getCantidad();
+    }
 }

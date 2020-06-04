@@ -1,12 +1,16 @@
 
 public class Main {
-    
-    public static void main(String [] args){
+
+    public static void main(String[] args) {
+
+        Sucursal viaducto = new Suc_Viaducto();
+        Sucursal copilco = new Suc_Copilco();
+        Sucursal azc = new Suc_Azcapotzalco();
         
-        Wonka3000 wn = new Wonka3000();
-        
-        Gomitas g = new Gomitas("dulce",100);
-        wn.empaqueta(g);
+        viaducto.hacerPedido("");
+        copilco.hacerPedido("");
+        azc.hacerPedido("");
+      
     }
-    
+
 }

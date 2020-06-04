@@ -10,12 +10,12 @@ public class Chocolate implements Producto{
     }
     
     @Override
-    public String tipo() {
+    public String getTipo() {
        return tipo;
     }
 
     @Override
-    public int cantidad() {
+    public int getCantidad() {
         return cantidad;
     }
     

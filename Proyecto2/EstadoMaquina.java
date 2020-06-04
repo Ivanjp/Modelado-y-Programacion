@@ -6,5 +6,11 @@ public interface EstadoMaquina {
     void elegirDulce();
 
     void entregarDulce();
+    
+    void terminar();
+    
+    void iniciar();
+    
+    void preparando();
 
 }

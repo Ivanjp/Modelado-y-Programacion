@@ -23,6 +23,6 @@ public class Oscuro extends RecetasWonka {
     void finalizando() {
         System.out.println("Finalizando proceso de preparación");
         Chocolate ch = new Chocolate("Chocolate oscuro", 50);
-        w.empaqueta(ch);
+        w.Prod_term(ch);
     }
 }
